@@ -37,7 +37,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    "chatbot",
+    "user",
+
+    # third party apps   
+    "channels", 
+    "rest_framework",
 ]
+
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -68,7 +78,17 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'mentalchatbot.wsgi.application'
+ASGI_APPLICATION = "mentalchatbot.asgi.application"
 
+# Redis configuration for websocket channel
+CHANNEL_LAYERS = {
+    'default': {
+        "BACKEND": 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [("127.0.0.1", 6379)],
+        },
+    },
+} 
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
