@@ -6,6 +6,15 @@ name = "pypi"
 [packages]
 django = "*"
 djangorestframework = "*"
+channels = "*"
+daphne = "*"
+redis = "*"
+transformers = "*"
+torch = "*"
+torchvision = "*"
+torchaudio = "*"
+tensorflow = "*"
+faiss-cpu = "*"
 
 [dev-packages]
 

@@ -13,7 +13,7 @@ class Conversation(models.Model):
 
 
 class Message(models.Model):
-    conversation = models.ForeignObject(
+    conversation = models.ForeignKey(
         Conversation,
         related_name="messages",
         on_delete=models.CASCADE
