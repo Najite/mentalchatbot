@@ -19,4 +19,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('api/', include('chatbot.urls')),  # Include chatbot API
+    path('admin/', admin.site.urls),
+
 ]
